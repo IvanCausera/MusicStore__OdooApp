@@ -1,3 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_song_user,SongUser,model_musicstore_song,musicstore_group_user,1,0,0,0
 access_song_manager,SongManager,model_musicstore_song,musicstore_group_manager,1,1,1,1
+
+
+
+
+
+
+access_disc_user,DiscUser,model_musicstore_disc,musicstore_group_user,1,0,0,0
+access_disc_manager,DiscManager,model_musicstore_disc,musicstore_group_manager,1,1,1,1

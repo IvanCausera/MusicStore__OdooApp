@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- Add Song view TODO -->
+    <record id="view_form_disc" model="ir.ui.view">
+        <field name="name">Disc Form</field>
+        <field name="model">musicstore.disc</field>
+        <field name="arch" type="xml">
+            <form string="Disc">
+                <sheet>
+                    <!-- Content goes here: -->
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="cod"/>
+                            <field name="name"/>
+                            <field name="disc_type"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="image" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree song view -->
+    <record id="view_tree_song" model="ir.ui.view">
+        <field name="name">Song List</field>
+        <field name="model">musicstore.song</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod"/>
+                <field name="name"/>
+                <field name="time" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search book view TODO -->
+</odoo>

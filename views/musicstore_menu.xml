@@ -8,10 +8,21 @@
 		res_model="musicstore.song"
 		view_mode="tree,form" />
 
+	<act_window id="action_musicstore_disc"
+		name="Disc"
+		res_model="musicstore.disc"
+		view_mode="tree,form" />
+
+
 	<!-- Menu item to open the Book list -->
 	<menuitem id="menu_musicstore_song"
 		name="Song"
 		action="action_musicstore_song"
-		parent="musicstore_menu" />
+		parent="musicstore_menu"/>
+
+	<menuitem id="menu_musicstore_disc"
+		name="Disc"
+		action="action_musicstore_disc"
+		parent="musicstore_menu"/>
 
 </odoo>
