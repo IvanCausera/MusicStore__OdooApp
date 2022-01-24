@@ -6,13 +6,13 @@ class Song(models.Model):
     _description = 'Song'
     _order = 'name'
     # String
+    cod = fields.Char('Code')
+
     name = fields.Char(
         'Title',
-        default=None,
-        index=True,
-        help='Song title',
-        readonly=False,
-        required=True,
-        translate=False
+        required=True
     )
+
+    time = fields.Float('Time', (3, 2))
+    image = fields.Binary('Cover')
 
