@@ -1,6 +1,7 @@
 from odoo import fields, models
 
-class recordCompany(models.Model):
+
+class RecordCompany(models.Model):
     _name = 'musicstore.recordcompany'
     _description = 'Record Company'
     cod = fields.Char('Code', required=True)
@@ -10,4 +11,3 @@ class recordCompany(models.Model):
     )
     address = fields.Char();
     tlf = fields.Char('Phone')
-

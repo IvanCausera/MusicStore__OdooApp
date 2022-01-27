@@ -8,6 +8,7 @@
         'security/musicstore_security.xml',
         'security/ir.model.access.csv',
         'views/musicstore_menu.xml',
-        'views/song_view.xml'
+        'views/song_view.xml',
+        'views/group_view.xml'
     ]
 }

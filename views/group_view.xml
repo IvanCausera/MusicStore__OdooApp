@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Add group view -->
+    <record id="view_form_group" model="ir.ui.view">
+        <field name="name">Group Form</field>
+        <field name="model">musicstore.group</field>
+        <field name="arch" type="xml">
+            <form string="Group">
+                <sheet>
+                    <!-- Content goes here: -->
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="cod"/>
+                            <field name="name"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="country"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
