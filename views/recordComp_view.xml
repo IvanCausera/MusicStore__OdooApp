@@ -3,7 +3,7 @@
     <!-- Form recoordCompany view -->
     <record id="view_form_recordComp" model="ir.ui.view">
         <field name="name">Record Company Form</field>
-        <field name="model">musicstore.recordCompany</field>
+        <field name="model">musicstore.recordcompany</field>
         <field name="arch" type="xml">
             <form string="Record Company">
                 <sheet>
@@ -26,7 +26,7 @@
     <!-- Tree recoordCompany view -->
     <record id="view_tree_recordComp" model="ir.ui.view">
         <field name="name">Record Company List</field>
-        <field name="model">musicstore.recordCompany</field>
+        <field name="model">musicstore.recordcompany</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="cod"/>
