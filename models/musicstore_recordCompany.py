@@ -1,7 +1,7 @@
 from odoo import fields, models
 
 
-class RecordCompany(models.Model):
+class recordCompany(models.Model):
     _name = 'musicstore.recordcompany'
     _description = 'Record Company'
     cod = fields.Char('Code', required=True)

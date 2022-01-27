@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <odoo>
-    <!-- Add Song view TODO -->
+    <!-- Disc view -->
     <record id="view_form_disc" model="ir.ui.view">
         <field name="name">Disc Form</field>
         <field name="model">musicstore.disc</field>
@@ -13,6 +13,7 @@
                             <field name="cod"/>
                             <field name="name"/>
                             <field name="disc_type"/>
+                            <field name="date_published"/>
                         </group>
                         <group name="group_right">
                             <field name="image" widget="image"/>
@@ -23,18 +24,28 @@
         </field>
     </record>
 
-    <!-- Tree song view -->
-    <record id="view_tree_song" model="ir.ui.view">
-        <field name="name">Song List</field>
-        <field name="model">musicstore.song</field>
+    <!-- Tree disc view -->
+    <record id="view_tree_disc" model="ir.ui.view">
+        <field name="name">Disc List</field>
+        <field name="model">musicstore.disc</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="cod"/>
                 <field name="name"/>
-                <field name="time" widget="float_time"/>
+                <field name="disc_type"/>
             </tree>
         </field>
     </record>
 
-    <!-- Search book view TODO -->
+    <!-- Search disc view -->
+    <record id="view_search_disc" model="ir.ui.view">
+        <field name="name">Disc Filters</field>
+        <field name="model">musicstore.disc</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cod"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 </odoo>

@@ -3,9 +3,13 @@ access_song_user,SongUser,model_musicstore_song,musicstore_group_user,1,0,0,0
 access_song_manager,SongManager,model_musicstore_song,musicstore_group_manager,1,1,1,1
 
 
-
-
-
-
 access_disc_user,DiscUser,model_musicstore_disc,musicstore_group_user,1,0,0,0
 access_disc_manager,DiscManager,model_musicstore_disc,musicstore_group_manager,1,1,1,1
+
+
+access_recordcompany_user,RecordCompanyUser,model_musicstore_recordcompany,musicstore_group_user,1,0,0,0
+access_recordcompany_manager,RecordCompanyManager,model_musicstore_recordcompany,musicstore_group_manager,1,1,1,1
+
+
+access_group_user,GroupUser,model_musicstore_group,musicstore_group_user,1,0,0,0
+access_group_manager,GroupManager,model_musicstore_group,musicstore_group_manager,1,1,1,1

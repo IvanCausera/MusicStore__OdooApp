@@ -36,5 +36,15 @@
         </field>
     </record>
 
-    <!-- Search book view TODO -->
+    <!-- Search song view -->
+    <record id="view_search_song" model="ir.ui.view">
+        <field name="name">Song Filters</field>
+        <field name="model">musicstore.song</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cod"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 </odoo>

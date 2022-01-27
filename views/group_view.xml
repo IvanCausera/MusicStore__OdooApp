@@ -21,4 +21,29 @@
             </form>
         </field>
     </record>
+
+    <!-- Tree group view -->
+    <record id="view_tree_group" model="ir.ui.view">
+        <field name="name">Group List</field>
+        <field name="model">musicstore.group</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod"/>
+                <field name="name"/>
+                <field name="country"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search group view -->
+    <record id="view_search_group" model="ir.ui.view">
+        <field name="name">Group Filters</field>
+        <field name="model">musicstore.group</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cod"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 </odoo>

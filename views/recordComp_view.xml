@@ -23,7 +23,7 @@
         </field>
     </record>
 
-    <!-- Tree recoordCompany view -->
+    <!-- Tree recordCompany view -->
     <record id="view_tree_recordComp" model="ir.ui.view">
         <field name="name">Record Company List</field>
         <field name="model">musicstore.recordcompany</field>
@@ -35,6 +35,16 @@
         </field>
     </record>
 
-    <!-- Search recoordCompany view TODO-->
+    <!-- Search recordCompany view -->
+    <record id="view_search_recordComp" model="ir.ui.view">
+        <field name="name">Record Company Filters</field>
+        <field name="model">musicstore.recordcompany</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="cod"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 
 </odoo>
