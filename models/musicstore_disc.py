@@ -26,3 +26,8 @@ class Disc(models.Model):
 
     # Image
     image = fields.Binary('Cover')
+
+    disks_id = fields.Many2one(
+        'musicstore.recordcompany',
+        string='Company Records'
+    );

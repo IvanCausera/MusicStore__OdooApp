@@ -1,7 +1,7 @@
 from odoo import fields, models
 
 
-class RecordCompany(models.Model):
+class recordCompany(models.Model):
     _name = 'musicstore.recordcompany'
     _description = 'Record Company'
     cod = fields.Char('Code', required=True)
@@ -11,3 +11,9 @@ class RecordCompany(models.Model):
     )
     address = fields.Char();
     tlf = fields.Char('Phone')
+
+    recordcompany_id = fields.One2many(
+        'musicstore.disc',
+        'disks_id',
+        string='Company Records'
+    );
