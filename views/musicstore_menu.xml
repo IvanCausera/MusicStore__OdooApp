@@ -13,6 +13,11 @@
 		res_model="musicstore.disc"
 		view_mode="tree,form" />
 
+	<act_window id="action_musicstore_recordcompany"
+		name="Record Company"
+		res_model="musicstore.recordcompany"
+		view_mode="tree,form" />
+
 
 	<!-- Menu item to open the Book list -->
 	<menuitem id="menu_musicstore_song"
@@ -23,6 +28,11 @@
 	<menuitem id="menu_musicstore_disc"
 		name="Disc"
 		action="action_musicstore_disc"
+		parent="musicstore_menu"/>
+
+	<menuitem id="menu_musicstore_recordcompany"
+		name="Record Company"
+		action="action_musicstore_recordcompany"
 		parent="musicstore_menu"/>
 
 </odoo>
