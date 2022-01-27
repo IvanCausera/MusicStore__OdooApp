@@ -31,3 +31,8 @@ class Disc(models.Model):
         'musicstore.recordcompany',
         string='Company Records'
     );
+
+    group_ids = fields.Many2many(
+        'musicstore.group',
+        string='Groups'
+    );

@@ -14,6 +14,7 @@
                             <field name="name"/>
                             <field name="disc_type"/>
                             <field name="disks_id"/>
+                            <field name=" group_ids"/>
                         </group>
                         <group name="group_right">
                             <field name="image" widget="image"/>

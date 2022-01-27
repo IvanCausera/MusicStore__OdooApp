@@ -19,3 +19,8 @@ class Group(models.Model):
         'res.country',
         string='Country'
     )
+
+    disc_ids = fields.Many2many(
+        'musicstore.disc',
+        string='Playlist'
+    );
