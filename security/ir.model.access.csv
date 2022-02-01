@@ -7,6 +7,13 @@ access_disc_user,DiscUser,model_musicstore_disc,musicstore_group_user,1,0,0,0
 access_disc_manager,DiscManager,model_musicstore_disc,musicstore_group_manager,1,1,1,1
 
 
+
+
+
+access_artists_user,ArtistsUser,model_musicstore_artists,musicstore_group_user,1,0,0,0
+access_artists_manager,ArtistsManager,model_musicstore_artists,musicstore_group_user,1,1,1,1
+
+
 access_recordcompany_user,RecordCompanyUser,model_musicstore_recordcompany,musicstore_group_user,1,0,0,0
 access_recordcompany_manager,RecordCompanyManager,model_musicstore_recordcompany,musicstore_group_manager,1,1,1,1
 

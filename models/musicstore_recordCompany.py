@@ -9,7 +9,7 @@ class recordCompany(models.Model):
         'Name',
         required=True
     )
-    address = fields.Char();
+    address = fields.Char()
     tlf = fields.Char('Phone')
 
     recordcompany_id = fields.One2many(

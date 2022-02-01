@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Form artists view -->
+    <record id="view_form_artists" model="ir.ui.view">
+        <field name="name">Artists Form</field>
+        <field name="model">musicstore.artists</field>
+        <field name="arch" type="xml">
+            <form string="Artists">
+                <sheet>
+                    <!-- Content goes here: -->
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="dni"/>
+                            <field name="name"/>
+                            <field name="email"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="surname"/>
+                            <field name="second_surname"/>
+                            <field name="tlf"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree artists view -->
+    <record id="view_tree_artists" model="ir.ui.view">
+        <field name="name">Artists List</field>
+        <field name="model">musicstore.artists</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="dni"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search artists view TODO-->
+</odoo>

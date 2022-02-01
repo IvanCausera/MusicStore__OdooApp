@@ -12,6 +12,10 @@
 		name="Disc"
 		res_model="musicstore.disc"
 		view_mode="tree,form" />
+	<act_window id="action_musicstore_artists"
+		name="Artists"
+		res_model="musicstore.artists"
+		view_mode="tree,form"/>
 
 	<act_window id="action_musicstore_recordcompany"
 		name="Record Company"
@@ -35,6 +39,11 @@
 		action="action_musicstore_disc"
 		parent="musicstore_menu"/>
 
+	<menuitem id="menu_musicstore_artists"
+		name="Artists"
+		action="action_musicstore_artists"
+		parent="musicstore_menu"/>
+
 	<menuitem id="menu_musicstore_recordcompany"
 		name="Record Company"
 		action="action_musicstore_recordcompany"
@@ -44,5 +53,6 @@
 		name="Group"
 		action="action_musicstore_group"
 		parent="musicstore_menu"/>
+
 
 </odoo>
