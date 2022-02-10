@@ -46,8 +46,7 @@ class Disc(models.Model):
 
     @api.depends('song_ids')
     def _compute_sumaTotal(self):
-        duration = 0
-        for song in self.song_ids:
-            duration += song.time
-
-
+        for disc in self:
+            disc.duration = 0
+            for song in disc.song_ids:
+                disc.duration += song.time

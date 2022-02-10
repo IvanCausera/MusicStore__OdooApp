@@ -35,7 +35,7 @@
         </field>
     </record>
 
-    <!-- Tree song view -->
+    <!-- Tree disc view -->
     <record id="view_tree_disc" model="ir.ui.view">
         <field name="name">Disc List</field>
         <field name="model">musicstore.disc</field>
