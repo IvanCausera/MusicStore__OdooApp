@@ -12,8 +12,8 @@ class recordCompany(models.Model):
     address = fields.Char()
     tlf = fields.Char('Phone')
 
-    recordcompany_id = fields.One2many(
+    discs_id = fields.One2many(
         'musicstore.disc',
-        'disks_id',
-        string='Company Records'
-    );
+        'company_id',
+        string='Discs'
+    )

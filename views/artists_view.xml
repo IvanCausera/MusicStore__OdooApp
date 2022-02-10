@@ -10,14 +10,15 @@
                     <!-- Content goes here: -->
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="dni"/>
+                            <field name="nickname"/>
                             <field name="name"/>
-                            <field name="email"/>
+                            <field name="surname"/>
+                            <field name="group_id"/>
                         </group>
                         <group name="group_right">
-                            <field name="surname"/>
-                            <field name="second_surname"/>
+                            <field name="dni"/>
                             <field name="tlf"/>
+                            <field name="email"/>
                         </group>
                     </group>
                 </sheet>

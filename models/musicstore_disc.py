@@ -27,12 +27,12 @@ class Disc(models.Model):
     # Image
     image = fields.Binary('Cover')
 
-    disks_id = fields.Many2one(
+    company_id = fields.Many2one(
         'musicstore.recordcompany',
         string='Company Records'
-    );
+    )
 
-    group_ids = fields.Many2many(
+    group_id = fields.Many2many(
         'musicstore.group',
         string='Groups'
-    );
+    )

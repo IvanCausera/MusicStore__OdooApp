@@ -12,7 +12,7 @@
                         <group name="group_left">
                             <field name="cod"/>
                             <field name="name"/>
-                            <field name="recordcompany_id"/>
+                            <field name="discs_id"/>
                         </group>
                         <group name="group_right">
                             <field name="address"/>

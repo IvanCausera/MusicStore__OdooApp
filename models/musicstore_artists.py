@@ -7,6 +7,11 @@ class artists(models.Model):
     dni = fields.Char('Code', required=True)
     name = fields.Char('Name', required=True)
     surname = fields.Char('Surname')
-    second_surname = fields.Char('Second Surname')
+    nickname = fields.Char()
     tlf = fields.Char('Phone')
     email = fields.Char('Email')
+
+    group_id = fields.Many2one(
+        'musicstore.group',
+        string='Group'
+    )

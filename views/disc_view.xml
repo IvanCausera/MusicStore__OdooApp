@@ -10,16 +10,24 @@
                     <!-- Content goes here: -->
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="cod"/>
                             <field name="name"/>
+                           <!-- <field name="cod"/> Hay que hacer que el codigo se cree solo-->
                             <field name="disc_type"/>
-                            <field name="disks_id"/>
-                            <field name=" group_ids"/>
                         </group>
                         <group name="group_right">
                             <field name="image" widget="image"/>
                         </group>
                     </group>
+                    <group name="group_bottom">
+                        <group name="group_left">
+                            <field name="date_published"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="group_id"/>
+                        </group>
+                    </group>
+
                 </sheet>
             </form>
         </field>
@@ -33,8 +41,7 @@
             <tree>
                 <field name="cod"/>
                 <field name="name"/>
-                <field name="time" widget="float_time"/>
-                <field name="disks_id"/>
+                <!-- <field name="time" widget="float_time"/>-->
             </tree>
         </field>
     </record>
