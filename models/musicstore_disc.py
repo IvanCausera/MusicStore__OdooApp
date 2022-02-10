@@ -20,9 +20,11 @@ class Disc(models.Model):
          ('other', 'Other')],
         'Type'
     )
+    stock = fields.Integer()
 
     # Date and Time
     date_published = fields.Date('Published on')
+    duration = fields.Float(compute='_compute_sumaTotal')
 
     # Image
     image = fields.Binary('Cover')
@@ -36,3 +38,16 @@ class Disc(models.Model):
         'musicstore.group',
         string='Groups'
     )
+
+    song_ids = fields.Many2many(
+        'musicstore.song',
+        string='Songs'
+    )
+
+    @api.depends('song_ids')
+    def _compute_sumaTotal(self):
+        duration = 0
+        for song in self.song_ids:
+            duration += song.time
+
+

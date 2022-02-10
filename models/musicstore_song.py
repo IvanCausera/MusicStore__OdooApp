@@ -16,3 +16,7 @@ class Song(models.Model):
     time = fields.Float('Time', (3, 2))
     image = fields.Binary('Cover')
 
+    disc_ids = fields.Many2many(
+        'musicstore.disc',
+        string="Discs"
+    )

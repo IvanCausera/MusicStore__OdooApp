@@ -13,6 +13,8 @@
                             <field name="name"/>
                            <!-- <field name="cod"/> Hay que hacer que el codigo se cree solo-->
                             <field name="disc_type"/>
+                            <field name="song_ids"/>
+                            <field name="duration"/>
                         </group>
                         <group name="group_right">
                             <field name="image" widget="image"/>
