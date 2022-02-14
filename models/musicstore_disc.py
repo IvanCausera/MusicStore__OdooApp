@@ -55,3 +55,10 @@ class Disc(models.Model):
             disc.duration = 0
             for song in disc.song_ids:
                 disc.duration += song.time
+
+    @api.model
+    def create(self, value):
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.disc') or 'New'
+        result = super(Disc, self).create(value)
+        return result

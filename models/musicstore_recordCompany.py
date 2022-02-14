@@ -17,3 +17,10 @@ class recordCompany(models.Model):
         'company_id',
         string='Discs'
     )
+
+    @api.model
+    def create(self, value):
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.recordcompany') or 'New'
+        result = super(recordCompany, self).create(value)
+        return result

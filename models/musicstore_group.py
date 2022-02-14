@@ -30,3 +30,10 @@ class Group(models.Model):
         'group_id',
         string='Artists'
     )
+
+    @api.model
+    def create(self, value):
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.group') or 'New'
+        result = super(Group, self).create(value)
+        return result
