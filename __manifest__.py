@@ -12,6 +12,9 @@
         'views/group_view.xml',
         'views/artists_view.xml',
         'views/disc_view.xml',
-        'views/recordComp_view.xml'
+        'views/recordComp_view.xml',
+        'views/sales_view.xml',
+        'data/ir_sequence_data.xml',
+
     ]
 }

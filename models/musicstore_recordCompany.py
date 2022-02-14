@@ -4,7 +4,7 @@ from odoo import fields, models
 class recordCompany(models.Model):
     _name = 'musicstore.recordcompany'
     _description = 'Record Company'
-    cod = fields.Char('Code', required=True)
+    cod = fields.Char('Code', required=True, readonly=True, copy=False, default='New')
     name = fields.Char(
         'Name',
         required=True

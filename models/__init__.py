@@ -3,3 +3,4 @@ from . import musicstore_disc
 from . import musicstore_recordCompany
 from . import musicstore_artists
 from . import  musicstore_group
+from . import  musicstore_sales
