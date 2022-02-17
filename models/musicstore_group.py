@@ -7,7 +7,7 @@ class Group(models.Model):
     _order = 'name'
 
     # String
-    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
 
     name = fields.Char(
         'Nombre',
@@ -38,7 +38,7 @@ class Group(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('id', 'New') == 'New':
-            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.group') or 'New'
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.group') or 'New'
         result = super(Group, self).create(value)
         return result

@@ -6,7 +6,7 @@ class Song(models.Model):
     _description = 'Song'
     _order = 'name'
     # String
-    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
 
     name = fields.Char(
         'Title',
@@ -23,9 +23,9 @@ class Song(models.Model):
     #     string="Discs"
     # )
 
-    # @api.model
-    # def create(self, value):
-    #     if value.get('id', 'New') == 'New':
-    #         value['id'] = self.env['ir.sequence'].next_by_code('musicstore.song') or 'New'
-    #     result = super(Song, self).create(value)
-    #     return result
+    @api.model
+    def create(self, value):
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.song') or 'New'
+        result = super(Song, self).create(value)
+        return result

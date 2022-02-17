@@ -7,11 +7,12 @@ class Disc(models.Model):
     _order = 'name'
 
     # String
-    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
     name = fields.Char(
         'Title',
         required=True
     )
+
     disc_type = fields.Selection(
         [('cd', 'CD'),
          ('cassette', 'Cassette'),
@@ -60,7 +61,7 @@ class Disc(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('id', 'New') == 'New':
-            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.disc') or 'New'
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.disc') or 'New'
         result = super(Disc, self).create(value)
         return result

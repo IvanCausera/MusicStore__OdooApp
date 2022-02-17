@@ -7,7 +7,7 @@ class Supplies(models.Model):
     _rec_name = 'user_id'
 
     # Numbers
-    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
     amount_disc = fields.Integer()
     amount_songs = fields.Integer()
     order_price = fields.Float(compute='_compute_orderprice', readonly=True)
@@ -32,8 +32,8 @@ class Supplies(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('id', 'New') == 'New':
-            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.supplies') or 'New'
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.supplies') or 'New'
         result = super(Supplies, self).create(value)
         discos = result.disc_id
         for disco in discos:

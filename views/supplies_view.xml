@@ -7,8 +7,8 @@
             <tree>
                 <field name="user_id"/>
                 <field name="provider_id"/>
-
                 <field name="request_date"/>
+                <field name="order_price"/>
             </tree>
         </field>
     </record>

@@ -10,7 +10,7 @@
                     <!-- Content goes here: -->
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="id"/>
+                            <field name="cod"/>
                             <field name="name"/>
                             <field name="country"/>
                         </group>
@@ -29,7 +29,7 @@
         <field name="model">musicstore.group</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="id"/>
+                <field name="cod"/>
                 <field name="name"/>
                 <field name="country"/>
             </tree>
@@ -42,7 +42,7 @@
         <field name="model">musicstore.group</field>
         <field name="arch" type="xml">
             <search>
-                <field name="id"/>
+                <field name="cod"/>
                 <field name="name"/>
             </search>
         </field>

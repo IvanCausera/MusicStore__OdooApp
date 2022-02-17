@@ -6,7 +6,7 @@ class Sales(models.Model):
     _description = 'Sales Request'
     _rec_name = 'user_id'
 
-    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
     user_id = fields.Many2one(
         'res.users',
         'Salesperson',
@@ -20,8 +20,8 @@ class Sales(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('id', 'New') == 'New':
-            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.sales') or 'New'
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.sales') or 'New'
         result = super(Sales, self).create(value)
         discos = result.disc_ids
         for disco in discos:
