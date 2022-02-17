@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_supplies" model="ir.ui.view">
+        <field name="name">Supplies Tree</field>
+        <field name="model">musicstore.supplies</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="user_id"/>
+                <field name="request_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_supplies" model="ir.ui.view">
+        <field name="name">Supplies Form</field>
+        <field name="model">musicstore.supplies</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="user_id"/>
+                        <field name="provider_id"/>
+                        <field name="request_date"/>
+
+                        <field name="disc_ids"/>
+                        <field name="amount_disc"/>
+
+                        <field name="songs_ids"/>
+                        <field name="amount_songs"/>
+
+                        <field name="order_price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

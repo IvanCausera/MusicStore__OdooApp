@@ -23,6 +23,11 @@
                 res_model="musicstore.sales"
                 view_mode="tree,form"/>
 
+    <act_window id="action_musicstore_supplies"
+                name="Supplies"
+                res_model="musicstore.supplies"
+                view_mode="tree,form"/>
+
 
     <!-- Menu item to open the Book list -->
     <menuitem id="menu_musicstore_song"
@@ -43,6 +48,11 @@
     <menuitem id="menu_musicstore_sales"
               name="Sales"
               action="action_musicstore_sales"
+              parent="musicstore_menu"/>
+
+    <menuitem id="menu_musicstore_supplies"
+              name="Supplies"
+              action="action_musicstore_supplies"
               parent="musicstore_menu"/>
 
 

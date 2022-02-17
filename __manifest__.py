@@ -14,6 +14,7 @@
         'views/disc_view.xml',
         'views/recordComp_view.xml',
         'views/sales_view.xml',
+        'views/supplies_view.xml',
         'data/ir_sequence_data.xml',
 
     ]
