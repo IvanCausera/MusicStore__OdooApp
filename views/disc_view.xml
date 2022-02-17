@@ -25,7 +25,6 @@
                     <group name="group_bottom">
                         <group name="group_left">
                             <field name="date_published"/>
-                            <field name="company_id"/>
                         </group>
                         <group name="group_right">
                             <field name="group_id"/>
@@ -46,7 +45,8 @@
                 <field name="id"/>
                 <field name="name"/>
                 <field name="stock"/>
-                <!-- <field name="time" widget="float_time"/>-->
+                <field name="duration" widget="float_time"/>
+                <field name="price"/>
             </tree>
         </field>
     </record>

@@ -4,6 +4,7 @@ from odoo import fields, models
 class artists(models.Model):
     _name = 'musicstore.artists'
     _description = 'Artists'
+
     id = fields.Char('Code', required=True)
     name = fields.Char('Name', required=True)
     surname = fields.Char('Surname')

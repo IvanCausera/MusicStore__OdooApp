@@ -1,4 +1,4 @@
-"id","name","address","tlf","discs_id"
+"id","name","address","tlf","discs_id/id"
 musicstore_recordcompany_CR,"Carlito Records","Madrid","917334612",musicstore_disc_SS
 musicstore_recordcompany_CAR,"Calaverita Records","Madrid","",musicstore_disc_SS
 musicstore_recordcompany_BNR,"Better Noise Records","New York","",musicstore_disc_ES

@@ -15,7 +15,6 @@
                         </group>
                         <group name="group_right">
                             <field name="country"/>
-                            <field name="disc_ids"/>
                             <field name="artists_id"/>
                         </group>
                     </group>

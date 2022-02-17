@@ -25,9 +25,14 @@ class Group(models.Model):
     #     string='Playlist'
     # )
 
-    artists_id = fields.One2many(
+    # artists_id = fields.One2many(
+    #     'musicstore.artists',
+    #     'group_id',
+    #     string='Artists'
+    # )
+
+    artists_id = fields.Many2many(
         'musicstore.artists',
-        'group_id',
         string='Artists'
     )
 

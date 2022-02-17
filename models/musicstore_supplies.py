@@ -23,7 +23,7 @@ class Supplies(models.Model):
         default=lambda s: s.env.uid)
 
     provider_id = fields.Many2one(
-        'res.users',
+        'res.partner',
         'Provider',
         default=lambda s: s.env.uid)
 
