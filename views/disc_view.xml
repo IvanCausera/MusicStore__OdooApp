@@ -15,6 +15,7 @@
                             <field name="disc_type"/>
                             <field name="song_ids"/>
                             <field name="duration"/>
+                            <field name="stock"/>
                         </group>
                         <group name="group_right">
                             <field name="image" widget="image"/>
@@ -44,6 +45,7 @@
             <tree>
                 <field name="cod"/>
                 <field name="name"/>
+                <field name="stock"/>
                 <!-- <field name="time" widget="float_time"/>-->
             </tree>
         </field>

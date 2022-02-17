@@ -6,15 +6,7 @@ class Sales(models.Model):
     _description = 'Sales Request'
     _rec_name = 'user_id'
 
-    # @api.model
-    # def _default_stage(self):
-    #     Stage = self.env['library.checkout.stage']
-    #     return Stage.search([], limit=1)
-    #
-    # @api.model
-    # def _group_expand_stage_id(self, stages, domain, order):
-    #     return stages.search([], order=order)
-    cod = fields.Char('Code', required=True, readonly=True, copy=False, default='New')
+    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
     user_id = fields.Many2one(
         'res.users',
         'Salesperson',
@@ -28,8 +20,8 @@ class Sales(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('cod', 'New') == 'New':
-            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.sales') or 'New'
+        if value.get('id', 'New') == 'New':
+            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.sales') or 'New'
         result = super(Sales, self).create(value)
         return result
 

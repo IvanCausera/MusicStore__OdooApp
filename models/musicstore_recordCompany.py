@@ -4,7 +4,7 @@ from odoo import fields, models, api
 class recordCompany(models.Model):
     _name = 'musicstore.recordcompany'
     _description = 'Record Company'
-    cod = fields.Char('Code', required=True, readonly=True, copy=False, default='New')
+    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
     name = fields.Char(
         'Name',
         required=True
@@ -20,7 +20,7 @@ class recordCompany(models.Model):
 
     @api.model
     def create(self, value):
-        if value.get('cod', 'New') == 'New':
-            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.recordcompany') or 'New'
+        if value.get('id', 'New') == 'New':
+            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.recordcompany') or 'New'
         result = super(recordCompany, self).create(value)
         return result
