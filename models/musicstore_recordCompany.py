@@ -18,11 +18,6 @@ class recordCompany(models.Model):
     #     string='Discs'
     # )
 
-    discs_id = fields.Many2one(
-        'musicstore.disc',
-        string='Discs'
-    )
-
     @api.model
     def create(self, value):
         if value.get('id', 'New') == 'New':

@@ -15,9 +15,6 @@
                             <field name="address"/>
                             <field name="tlf"/>
                         </group>
-                        <group name="group_right">
-                            <field name="discs_id"/>
-                        </group>
                     </group>
                 </sheet>
             </form>
