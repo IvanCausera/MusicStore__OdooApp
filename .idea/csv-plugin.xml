@@ -31,7 +31,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/data/musicstore.sales.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/data/musicstore.song.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/data/musicstore.supplies.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

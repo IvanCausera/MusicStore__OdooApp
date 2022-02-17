@@ -11,6 +11,8 @@
         'data/musicstore.group.csv',
         'data/musicstore.disc.csv',
         'data/musicstore.recordcompany.csv',
+        'data/musicstore.sales.csv',
+        'data/musicstore.supplies.csv'
 
     ],
     'data': [
