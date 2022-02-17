@@ -22,10 +22,10 @@
                         <field name="provider_id"/>
                         <field name="request_date"/>
 
-                        <field name="disc_ids"/>
+                        <field name="disc_id"/>
                         <field name="amount_disc"/>
 
-                        <field name="songs_ids"/>
+                        <field name="songs_id"/>
                         <field name="amount_songs"/>
 
                         <field name="order_price"/>
