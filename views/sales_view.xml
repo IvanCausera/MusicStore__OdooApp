@@ -7,6 +7,7 @@
             <tree>
                 <field name="user_id"/>
                 <field name="sales_date"/>
+                <field name="order_price"/>
             </tree>
         </field>
     </record>
@@ -26,6 +27,19 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Search view -->
+    <record id="view_search_sales" model="ir.ui.view">
+        <field name="name">Sales Filters</field>
+        <field name="model">musicstore.sales</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id"/>
+                <field name="disc_ids"/>
+                <field name="song_ids"/>
+            </search>
         </field>
     </record>
 </odoo>

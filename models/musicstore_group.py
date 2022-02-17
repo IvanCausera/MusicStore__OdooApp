@@ -7,7 +7,7 @@ class Group(models.Model):
     _order = 'name'
 
     # String
-    id = fields.Char('Id', string='Code', required=True, readonly=True, copy=False, default='New')
+    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
 
     name = fields.Char(
         'Nombre',

@@ -59,7 +59,12 @@
             <search>
                 <field name="id"/>
                 <field name="name"/>
-                <field name="stock"/>
+                <filter name="With stock"
+                        string="Stock"
+                        domain="[('stock','>', 0)]"/>
+                <filter name="Without stock"
+                        string="No Stock"
+                        domain="[('stock','=', 0)]"/>
             </search>
         </field>
     </record>

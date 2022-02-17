@@ -6,6 +6,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="user_id"/>
+                <field name="provider_id"/>
+
                 <field name="request_date"/>
             </tree>
         </field>
@@ -32,6 +34,20 @@
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Search view -->
+    <record id="view_search_supplies" model="ir.ui.view">
+        <field name="name">Supplies Filters</field>
+        <field name="model">musicstore.supplies</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id"/>
+                <field name="provider_id"/>
+                <field name="disc_id"/>
+                <field name="songs_id"/>
+            </search>
         </field>
     </record>
 </odoo>
