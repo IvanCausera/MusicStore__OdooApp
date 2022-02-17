@@ -20,10 +20,10 @@ class Group(models.Model):
         string='Country'
     )
 
-    disc_ids = fields.Many2many(
-        'musicstore.disc',
-        string='Playlist'
-    )
+    # disc_ids = fields.Many2many(
+    #     'musicstore.disc',
+    #     string='Playlist'
+    # )
 
     artists_id = fields.One2many(
         'musicstore.artists',

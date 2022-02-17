@@ -18,10 +18,10 @@ class Song(models.Model):
     price = fields.Float('Song price', (3, 2))
     stock = fields.Integer()
 
-    disc_ids = fields.Many2many(
-        'musicstore.disc',
-        string="Discs"
-    )
+    # disc_ids = fields.Many2many(
+    #     'musicstore.disc',
+    #     string="Discs"
+    # )
 
     @api.model
     def create(self, value):

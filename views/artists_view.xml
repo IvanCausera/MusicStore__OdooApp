@@ -16,7 +16,7 @@
                             <field name="group_id"/>
                         </group>
                         <group name="group_right">
-                            <field name="dni"/>
+                            <field name="id"/>
                             <field name="tlf"/>
                             <field name="email"/>
                         </group>
@@ -33,7 +33,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="dni"/>
+                <field name="id"/>
                 <field name="email"/>
             </tree>
         </field>

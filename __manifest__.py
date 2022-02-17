@@ -4,6 +4,13 @@
     'author': 'Iván Causera, Estella Rubio, Antonio Leiva',
     'depends': ['base'],
     'application': True,
+    'demo': [
+        'data/musicstore.song.csv',
+        'data/musicstore.artists.csv',
+        'data/musicstore.disc.csv',
+        'data/musicstore.group.csv',
+        'data/musicstore.recordcompany.csv',
+    ],
     'data': [
         'security/musicstore_security.xml',
         'security/ir.model.access.csv',

@@ -31,10 +31,10 @@ class Disc(models.Model):
 
     price = fields.Float('Disc price', (3, 2))
 
-    company_id = fields.Many2one(
-        'musicstore.recordcompany',
-        string='Company Records'
-    )
+    # company_id = fields.Many2one(
+    #     'musicstore.recordcompany',
+    #     string='Company Records'
+    # )
 
     group_id = fields.Many2many(
         'musicstore.group',

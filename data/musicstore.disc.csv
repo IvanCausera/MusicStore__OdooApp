@@ -1,0 +1,3 @@
+"id","name","disc_type","stock","date_published","group_id/id","song_ids/id"
+musicstore_disc_SS,"Spanish Songs","CD","5","28-11-2019","","musicstore_song_vlnd,musicstore_song_nenp,dpct"
+musicstore_disc_ES,"English Songs","Digital","9","07-02-2021","musicstore_group_ATL,musicstore_group_AGT","musicstore_song_ftg,musicstore_song_mnst"
