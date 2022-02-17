@@ -10,7 +10,7 @@
                     <!-- Content goes here: -->
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="cod"/>
+                            <field name="id"/>
                             <field name="name"/>
                             <field name="time" widget="float_time"/>
                             <field name="price"/>
@@ -31,7 +31,7 @@
         <field name="model">musicstore.song</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="cod"/>
+                <field name="id"/>
                 <field name="name"/>
                 <field name="time" widget="float_time"/>
                 <field name="stock"/>
@@ -45,7 +45,7 @@
         <field name="model">musicstore.song</field>
         <field name="arch" type="xml">
             <search>
-                <field name="cod"/>
+                <field name="id"/>
                 <field name="name"/>
             </search>
         </field>

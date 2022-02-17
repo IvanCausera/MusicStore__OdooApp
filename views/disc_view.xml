@@ -43,7 +43,7 @@
         <field name="model">musicstore.disc</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="cod"/>
+                <field name="id"/>
                 <field name="name"/>
                 <field name="stock"/>
                 <!-- <field name="time" widget="float_time"/>-->
@@ -57,8 +57,9 @@
         <field name="model">musicstore.disc</field>
         <field name="arch" type="xml">
             <search>
-                <field name="cod"/>
+                <field name="id"/>
                 <field name="name"/>
+                <field name="stock"/>
             </search>
         </field>
     </record>

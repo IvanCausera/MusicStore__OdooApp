@@ -23,6 +23,22 @@ class Sales(models.Model):
         if value.get('id', 'New') == 'New':
             value['id'] = self.env['ir.sequence'].next_by_code('musicstore.sales') or 'New'
         result = super(Sales, self).create(value)
+        discos = result.disc_ids
+        for disco in discos:
+            if disco.stock == 0:
+                raise exceptions.ValidationError(
+                    'No copies available for book %s' % disco.stock
+                )
+            else:
+                disco.stock = disco.stock - 1
+        canciones = result.song_ids
+        for cancion in canciones:
+            if cancion.stock == 0:
+                raise exceptions.ValidationError(
+                    'No copies available for book %s' % cancion.stock
+                )
+            else:
+                cancion.stock = cancion.stock - 1
         return result
 
     @api.onchange('user_id')
