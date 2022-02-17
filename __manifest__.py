@@ -5,11 +5,13 @@
     'depends': ['base'],
     'application': True,
     'demo': [
+        'data/ir_sequence_data.xml',
         'data/musicstore.song.csv',
         'data/musicstore.artists.csv',
-        'data/musicstore.disc.csv',
         'data/musicstore.group.csv',
+        'data/musicstore.disc.csv',
         'data/musicstore.recordcompany.csv',
+
     ],
     'data': [
         'security/musicstore_security.xml',
@@ -22,7 +24,5 @@
         'views/recordComp_view.xml',
         'views/sales_view.xml',
         'views/supplies_view.xml',
-        'data/ir_sequence_data.xml',
-
     ]
 }

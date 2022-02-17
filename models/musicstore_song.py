@@ -15,7 +15,7 @@ class Song(models.Model):
 
     time = fields.Float('Time', (3, 2))
     image = fields.Binary('Cover')
-    price = fields.Float('Song price', (3, 2))
+    price = fields.Float('Song price', (5, 2), required=True)
     stock = fields.Integer()
 
     # disc_ids = fields.Many2many(
@@ -23,9 +23,9 @@ class Song(models.Model):
     #     string="Discs"
     # )
 
-    @api.model
-    def create(self, value):
-        if value.get('id', 'New') == 'New':
-            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.song') or 'New'
-        result = super(Song, self).create(value)
-        return result
+    # @api.model
+    # def create(self, value):
+    #     if value.get('id', 'New') == 'New':
+    #         value['id'] = self.env['ir.sequence'].next_by_code('musicstore.song') or 'New'
+    #     result = super(Song, self).create(value)
+    #     return result

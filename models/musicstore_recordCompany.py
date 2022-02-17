@@ -12,11 +12,11 @@ class recordCompany(models.Model):
     address = fields.Char()
     tlf = fields.Char('Phone')
 
-    # discs_id = fields.One2many(
-    #     'musicstore.disc',
-    #     'company_id',
-    #     string='Discs'
-    # )
+    discs_id = fields.One2many(
+        'musicstore.disc',
+        'company_id',
+        string='Discs'
+    )
 
     @api.model
     def create(self, value):

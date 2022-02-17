@@ -29,7 +29,7 @@ class Disc(models.Model):
     # Image
     image = fields.Binary('Cover')
 
-    price = fields.Float('Disc price', (3, 2), required=True)
+    price = fields.Float('Disc price', (5, 2), required=True)
 
     company_id = fields.Many2one(
         'musicstore.recordcompany',
