@@ -3,7 +3,7 @@
     <data noupdate="0">
         <record id="sequence_disc_number" model="ir.sequence">
             <field name="name">Disc number</field>
-            <field name="code">muscistore.disc</field>
+            <field name="code">musicstore.disc</field>
             <field name="active">TRUE</field>
             <field name="prefix">D</field>
             <field name="padding">6</field>
@@ -12,7 +12,7 @@
         </record>
         <record id="sequence_group_number" model="ir.sequence">
             <field name="name">Group number</field>
-            <field name="code">muscistore.group</field>
+            <field name="code">musicstore.group</field>
             <field name="active">TRUE</field>
             <field name="prefix">G</field>
             <field name="padding">6</field>
