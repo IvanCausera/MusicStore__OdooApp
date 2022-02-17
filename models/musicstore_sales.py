@@ -16,7 +16,7 @@ class Sales(models.Model):
 
     disc_ids = fields.Many2many('musicstore.disc', string='Discs')
     song_ids = fields.Many2many('musicstore.song', string='Songs')
-    order_price = fields.Float(compute='_compute_orderprice')
+    order_price = fields.Float(compute='_compute_orderprice', readonly=True)
 
     @api.model
     def create(self, value):

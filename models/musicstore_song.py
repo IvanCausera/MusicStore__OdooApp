@@ -15,13 +15,13 @@ class Song(models.Model):
 
     time = fields.Float('Time', (3, 2))
     image = fields.Binary('Cover')
-    price = fields.Float('Song price', (3, 2))
+    price = fields.Float('Song price', (3, 2), required=True)
     stock = fields.Integer()
 
-    disc_ids = fields.Many2many(
-        'musicstore.disc',
-        string="Discs"
-    )
+    #disc_ids = fields.Many2many(
+    #    'musicstore.disc',
+    #    string="Discs"
+    #)
 
     @api.model
     def create(self, value):

@@ -7,6 +7,7 @@ class Supplies(models.Model):
     _rec_name = 'user_id'
 
     # Numbers
+    id = fields.Char('Id', required=True, readonly=True, copy=False, default='New')
     amount_disc = fields.Integer()
     amount_songs = fields.Integer()
     order_price = fields.Float(compute='_compute_orderprice', readonly=True)
@@ -26,8 +27,23 @@ class Supplies(models.Model):
         'Provider',
         default=lambda s: s.env.uid)
 
-    disc_ids = fields.Many2one('musicstore.disc', string='Disc')
-    songs_ids = fields.Many2one('musicstore.song', string='Song')
+    disc_id = fields.Many2one('musicstore.disc', string='Disc')
+    songs_id = fields.Many2one('musicstore.song', string='Song')
+
+    @api.model
+    def create(self, value):
+        if value.get('id', 'New') == 'New':
+            value['id'] = self.env['ir.sequence'].next_by_code('musicstore.supplies') or 'New'
+        result = super(Supplies, self).create(value)
+        discos = result.disc_id
+        for disco in discos:
+            disco.stock += result.amount_disc
+
+        canciones = result.songs_id
+        for cancion in canciones:
+            cancion.stock += result.amount_songs
+
+        return result
 
     @api.onchange('user_id')
     def onchange_member_id(self):
@@ -41,12 +57,12 @@ class Supplies(models.Model):
                 }
             }
 
-    @api.depends('disc_ids', 'songs_ids', 'amount_disc', 'amount_songs')
+    @api.depends('disc_id', 'songs_id', 'amount_disc', 'amount_songs')
     def _compute_orderprice(self):
         totalDiscos = 0
         totalCancion = 0
-        for disc in self.disc_ids:
+        for disc in self.disc_id:
             totalDiscos += disc.price * self.amount_disc
-        for song in self.songs_ids:
+        for song in self.songs_id:
             totalCancion += song.price * self.amount_songs
         self.order_price = totalDiscos + totalCancion
