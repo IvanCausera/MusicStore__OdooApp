@@ -5,6 +5,7 @@
         <field name="model">musicstore.sales</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="cod"/>
                 <field name="user_id"/>
                 <field name="sales_date"/>
                 <field name="order_price"/>

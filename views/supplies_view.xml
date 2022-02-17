@@ -5,6 +5,7 @@
         <field name="model">musicstore.supplies</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="cod"/>
                 <field name="user_id"/>
                 <field name="provider_id"/>
                 <field name="request_date"/>
