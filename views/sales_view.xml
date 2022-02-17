@@ -21,6 +21,8 @@
                         <field name="user_id"/>
                         <field name="sales_date"/>
                         <field name="disc_ids"/>
+                        <field name="song_ids"/>
+                        <field name="order_price"/>
                     </group>
                 </sheet>
             </form>
