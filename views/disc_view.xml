@@ -9,29 +9,28 @@
                 <sheet>
                     <!-- Content goes here: -->
                     <group name="group_top">
-                        <group name="group_left">
+                        <group name="group_right">
+                            <field name="id"/>
                             <field name="name"/>
-                           <field name="id"/>
                             <field name="disc_type"/>
-                            <field name="song_ids"/>
-                            <field name="duration"/>
+                            <field name="price"/>
                             <field name="stock"/>
+                            <field name="date_published"/>
                             <field name="company_id"/>
                         </group>
-                        <group name="group_right">
-                            <field name="image" widget="image"/>
-                            <field name="price"/>
-                        </group>
-                    </group>
-                    <group name="group_bottom">
                         <group name="group_left">
-                            <field name="date_published"/>
-                        </group>
-                        <group name="group_right">
-                            <field name="group_id"/>
+                            <field name="image" widget="image"/>
                         </group>
                     </group>
-
+                    <group name="group_buttom">
+                        <group name="group_right">
+                            <field name="group_ids"/>
+                        </group>
+                        <group name="group_left">
+                            <field name="song_ids"/>
+                            <field name="duration" widget="float_time"/>
+                        </group>
+                    </group>
                 </sheet>
             </form>
         </field>

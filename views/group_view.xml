@@ -12,9 +12,9 @@
                         <group name="group_left">
                             <field name="id"/>
                             <field name="name"/>
+                            <field name="country"/>
                         </group>
                         <group name="group_right">
-                            <field name="country"/>
                             <field name="artists_id"/>
                         </group>
                     </group>

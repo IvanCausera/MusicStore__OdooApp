@@ -36,7 +36,7 @@ class Disc(models.Model):
         string='Company Records'
     )
 
-    group_id = fields.Many2many(
+    group_ids = fields.Many2many(
         'musicstore.group',
         string='Groups'
     )
