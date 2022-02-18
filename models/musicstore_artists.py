@@ -1,18 +1,21 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 
-class artists(models.Model):
+class Artists(models.Model):
     _name = 'musicstore.artists'
     _description = 'Artists'
 
-    id = fields.Char('Code', required=True)
+    # String
+    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
     name = fields.Char('Name', required=True)
     surname = fields.Char('Surname')
     nickname = fields.Char()
     tlf = fields.Char('Phone')
     email = fields.Char('Email')
 
-    # group_id = fields.Many2one(
-    #     'musicstore.group',
-    #     string='Group'
-    # )
+    @api.model
+    def create(self, value):
+        if value.get('cod', 'New') == 'New':
+            value['cod'] = self.env['ir.sequence'].next_by_code('musicstore.artists') or 'New'
+        result = super(Artists, self).create(value)
+        return result

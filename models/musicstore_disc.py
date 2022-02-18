@@ -2,17 +2,19 @@ from odoo import fields, models, api
 
 
 class Disc(models.Model):
+    _inherit = 'musicstore.product'
     _name = 'musicstore.disc'
     _description = 'Disc'
     _order = 'name'
 
-    # String
-    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
-    name = fields.Char(
-        'Title',
-        required=True
-    )
+    # Date and Time
+    date_published = fields.Date('Published on')
+    duration = fields.Float(compute='_compute_sumaTotal')
 
+    # Numbers
+    price = fields.Float('Disc price', (5, 2), required=True)
+
+    # Other
     disc_type = fields.Selection(
         [('cd', 'CD'),
          ('cassette', 'Cassette'),
@@ -21,16 +23,6 @@ class Disc(models.Model):
          ('other', 'Other')],
         'Type'
     )
-    stock = fields.Integer()
-
-    # Date and Time
-    date_published = fields.Date('Published on')
-    duration = fields.Float(compute='_compute_sumaTotal')
-
-    # Image
-    image = fields.Binary('Cover')
-
-    price = fields.Float('Disc price', (5, 2), required=True)
 
     company_id = fields.Many2one(
         'musicstore.recordcompany',
@@ -46,11 +38,6 @@ class Disc(models.Model):
         'musicstore.song',
         string='Songs'
     )
-
-    # sales_id = fields.One2many(
-    #     'musicstore.sales',
-    #     'disc_id'
-    # )
 
     @api.depends('song_ids')
     def _compute_sumaTotal(self):

@@ -8,7 +8,8 @@
                 <field name="cod"/>
                 <field name="user_id"/>
                 <field name="sales_date"/>
-                <field name="order_price"/>
+                <field name="disc_ids" widget="many2many_tags"/>
+                <field name="song_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -37,6 +38,7 @@
         <field name="model">musicstore.sales</field>
         <field name="arch" type="xml">
             <search>
+                <field name="cod"/>
                 <field name="user_id"/>
                 <field name="disc_ids"/>
                 <field name="song_ids"/>

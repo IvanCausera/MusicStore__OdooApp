@@ -36,7 +36,7 @@
         </field>
     </record>
 
-    <!-- Search group view -->
+    <!-- Search view -->
     <record id="view_search_group" model="ir.ui.view">
         <field name="name">Group Filters</field>
         <field name="model">musicstore.group</field>

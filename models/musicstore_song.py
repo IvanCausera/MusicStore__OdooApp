@@ -2,26 +2,13 @@ from odoo import fields, models, api
 
 
 class Song(models.Model):
+    _inherit = 'musicstore.product'
     _name = 'musicstore.song'
     _description = 'Song'
     _order = 'name'
-    # String
-    cod = fields.Char('Cod', required=True, readonly=True, copy=False, default='New')
 
-    name = fields.Char(
-        'Title',
-        required=True
-    )
-
+    # Date and Time
     time = fields.Float('Time', (3, 2))
-    image = fields.Binary('Cover')
-    price = fields.Float('Song price', (5, 2), required=True)
-    stock = fields.Integer()
-
-    # disc_ids = fields.Many2many(
-    #     'musicstore.disc',
-    #     string="Discs"
-    # )
 
     @api.model
     def create(self, value):

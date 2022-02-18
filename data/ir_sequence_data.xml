@@ -55,6 +55,14 @@
             <field name="number_next">1</field>
             <field name="number_increment">1</field>
         </record>
-
+        <record id="sequence_artists_number" model="ir.sequence">
+            <field name="name">Artists number</field>
+            <field name="code">musicstore.artists</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">AR</field>
+            <field name="padding">6</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
     </data>
 </odoo>
